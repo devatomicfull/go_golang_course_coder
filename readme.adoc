@@ -1,0 +1,39 @@
+= Exercício 1 — Fundamentos do Go
+:toc:
+
+== Resumo Rápido
+Este exercício apresenta a **estrutura básica de um programa Go**, explicando o uso de `package main`, a função `main()` e os primeiros comandos de saída com `fmt`.
+
+== Atividade 1
+*Link da atividade:* `./1_fundamentos/main.go`
+
+=== Objetivo
+Criar o primeiro programa executável em Go entendendo as regras fundamentais de organização:
+
+* Programas executáveis devem usar `package main`.
+* A função `main()` é o ponto de entrada.
+* A pasta não é um pacote reutilizável — portanto mantém `main`.
+* Uso inicial de `fmt.Print`, `fmt.Println` e `fmt.Printf`.
+
+=== O que foi feito
+
+* Importado o pacote padrão `fmt`.
+* Criado um programa que imprime mensagens formatadas no console.
+* Demonstrado o uso de **escapes** (`\n`, `\`, `%s`) e a diferença entre strings normais e RAW.
+* Comentado sobre boas práticas de comentários no código.
+
+=== Como executar
+
+```
+cd 1_fundamentos
+go run .
+```
+
+Ou gerar o binário:
+
+```
+go build
+```
+
+== Conclusão
+Esta atividade estabelece a base para compreender como Go organiza e executa programas, preparando para módulos, pacotes e projetos maiores.
