@@ -1,11 +1,11 @@
-= Exercício 1 — Fundamentos do Go
+= Atividades do Curso de Go
+:doctype: book
 :toc:
 
-== Resumo Rápido
-Este exercício apresenta a **estrutura básica de um programa Go**, explicando o uso de `package main`, a função `main()` e os primeiros comandos de saída com `fmt`.
+== Exercício 1 — Fundamentos do Go
 
-== Atividade 1
-*Link da atividade:* `./1_fundamentos/main.go`
+=== Resumo Rápido
+Este exercício apresenta a **estrutura básica de um programa Go**, explicando o uso de `package main`, a função `main()` e os primeiros comandos de saída com `fmt`.
 
 === Objetivo
 Criar o primeiro programa executável em Go entendendo as regras fundamentais de organização:
@@ -35,5 +35,64 @@ Ou gerar o binário:
 go build
 ```
 
-== Conclusão
+=== Conclusão
 Esta atividade estabelece a base para compreender como Go organiza e executa programas, preparando para módulos, pacotes e projetos maiores.
+
+== Exercício 2 - Comandos Go
+:toc:
+
+=== Resumo Rápido
+Este programa imprime no terminal uma lista completa dos comandos principais do Go, explicando claramente para que cada um serve. Ele funciona como um guia de estudo dos comandos utilizados na linha de comando da linguagem Go.
+
+=== Objetivo
+Apresentar e explicar os comandos essenciais do Go utilizados no terminal, incluindo build, run, documentação, módulos, testes, instalação de pacotes e limpeza do ambiente.
+
+=== O que foi feito
+O código exibe no console:
+
+* **go** → Comando principal do Go; mostra ajuda e controla o toolchain.
+* **go help get** → Exibe ajuda detalhada sobre o comando `go get`.
+* **go version** → Mostra a versão instalada do Go.
+* **godoc -http=:6060** → Inicia um servidor local com a documentação completa da linguagem.
+* **go env** → Lista variáveis de ambiente do Go (GOPATH, GOROOT, etc.).
+* **go doc cmd/vet** → Exibe a documentação do comando `go vet`.
+* **go vet comandos.go** → Analisa o arquivo em busca de padrões suspeitos e possíveis bugs.
+* **go build comandos.go** → Compila o arquivo e gera um binário.
+* **./comandos** → Executa o binário gerado (no Linux/Mac).
+* **go run comandos.go** → Compila e executa sem gerar binário.
+* **ls ~/go/src/github.com** → Lista pacotes instalados no GOPATH (Linux/Mac).
+* **dir ~/go/src/github.com** → Lista pacotes instalados no GOPATH (Windows).
+* **go get -u github.com/go-sql-driver/mysql** → Instala ou atualiza dependências.
+
+Comandos complementares exibidos:
+
+* **go mod init \<nome\>** → Cria um novo módulo Go.
+* **go mod tidy** → Ajusta e organiza dependências.
+* **go mod download** → Baixa todas as dependências do módulo.
+* **go list ./...** → Lista todos os pacotes do projeto.
+* **go install \<pacote\>@latest** → Instala binários e ferramentas Go.
+* **go test** → Executa testes do pacote atual.
+* **go test ./...** → Executa testes de todos os pacotes.
+* **go fmt ./...** → Formata automaticamente todo o código Go.
+* **go clean** → Remove arquivos temporários e restos de build.
+* **go fix** → Atualiza código antigo para versões recentes.
+* **go tool pprof** → Ferramenta avançada de análise de performance.
+
+=== Como executar
+[source,bash]
+----
+go run comandos.go
+----
+
+Ou gerar o binário:
+
+[source,bash]
+----
+go build
+./comandos
+----
+
+=== Conclusão
+O programa apresenta, de forma clara e objetiva, os comandos mais importantes do Go para uso no terminal.
+Ele funciona como um guia de consulta rápida para quem está aprendendo o ecossistema Go, cobrindo desde comandos básicos até ferramentas avançadas como pprof e vet.
+
