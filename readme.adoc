@@ -96,3 +96,32 @@ go build
 O programa apresenta, de forma clara e objetiva, os comandos mais importantes do Go para uso no terminal.
 Ele funciona como um guia de consulta rápida para quem está aprendendo o ecossistema Go, cobrindo desde comandos básicos até ferramentas avançadas como pprof e vet.
 
+= Exercício 3 - Constantes (const), Variáveis (var) e Inferência de Tipo utilizado somente dentro de função (:=)
+:toc:
+
+=== Resumo Rápido
+Este exercício demonstra os conceitos de constantes, variáveis, inferência de tipos e os tipos primitivos básicos do Go. Ele apresenta de forma organizada como declarar valores, como o compilador infere tipos padrão e como usar a declaração curta := dentro de funções.
+
+=== Objetivo
+- Como declarar constantes e variáveis com ou sem tipo explícito.
+- Como funciona a inferência de tipo e os tipos padrão do compilador (int, float64, complex128).
+- Diferenças entre tipos numéricos, strings, runes e números complexos.
+- Multi-atribuição e organização de blocos de constantes e variáveis.
+
+=== O que foi feito
+O conteúdo estudado inclui:
+
+- Constantes com tipo explícito e bloco de constantes com tipo inferido.
+- Variáveis com tipo explícito, inferência via var e declaração curta :=.
+- Tipos booleanos (bool) e sua inferência.
+- Tipos numéricos inteiros (int8, uint8, int32, uint32, int) e floats (float32, float64).
+- Strings e runes, com explicação sobre rune como alias de int32.
+- Números complexos (complex64, complex128) e funções complex(), real() e imag().
+- Multi-atribuição, mostrando como declarar e inicializar múltiplas variáveis em uma linha.
+- Uso de pacotes e aliases, como m "math" para funções matemáticas.
+
+Cada item inclui explicações sobre inferência de tipos e qual tipo padrão o Go atribui quando o tipo não é declarado explicitamente.
+
+=== Conclusão
+Apresenta um resumo didático dos tipos básicos do Go, constantes, variáveis e inferência de tipo, sem exibir o código fonte. É ideal como material de estudo para fixar conceitos antes de avançar para estruturas mais complexas como arrays, slices, maps e structs.
+
