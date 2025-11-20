@@ -107,4 +107,27 @@ func main() {
 	fmt.Println("Número:", numero)
 	fmt.Println("Teste:", teste)
 	fmt.Println("Texto:", text)
+
+	// ======================= FORMATANDO NO PRINTF =======================
+
+	fmt.Println("\n")
+	fmt.Print("Mesma")
+	fmt.Print(" linha.")
+	fmt.Println(" Nova")
+	fmt.Println("linha.")
+	x := 3.141516
+	// fmt.Println("O valor de x é " + x)
+	// No Go, fmt.Sprint é uma função que converte valores em string sem imprimir nada no console.
+	xs := fmt.Sprint(x)
+	fmt.Println("O valor de x é " + xs)
+	fmt.Println("O valor de x é", x)
+	fmt.Printf("O valor de x é %.2f.", x)
+
+	aT := 1
+	bT := 1.9999
+	cT := false
+	dT := "opa"
+
+	fmt.Printf("\n%d %f %.1f %t %s", aT, bT, bT, cT, dT)
+	fmt.Printf("\n%v %v %v %v", aT, bT, cT, dT)
 }

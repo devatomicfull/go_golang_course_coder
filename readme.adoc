@@ -108,6 +108,9 @@ Este exercício demonstra os conceitos de constantes, variáveis, inferência de
 - Diferenças entre tipos numéricos, strings, runes e números complexos.
 - Multi-atribuição e organização de blocos de constantes e variáveis.
 
+O uso de Sprintf:
+`fmt.Sprintf` é uma função do pacote `fmt` que permite **formatar valores em uma string**, usando **verbos de formatação**, sem imprimir nada no console. É útil para criar mensagens formatadas que serão armazenadas ou usadas em outras funções.
+
 === O que foi feito
 O conteúdo estudado inclui:
 
@@ -119,6 +122,30 @@ O conteúdo estudado inclui:
 - Números complexos (complex64, complex128) e funções complex(), real() e imag().
 - Multi-atribuição, mostrando como declarar e inicializar múltiplas variáveis em uma linha.
 - Uso de pacotes e aliases, como m "math" para funções matemáticas.
+
+- `fmt.Sprintf` recebe **um formato** (string) e **uma lista de valores**, retornando uma **string** formatada.
+
+=== Verbos de formatação do fmt.Printf
+
+Os seguintes verbos podem ser usados com todos os tipos de dados:
+
+[options="header"]
+|===
+| Verbo | Descrição
+
+| %v
+| Imprime o valor no formato padrão
+
+| %#v
+| Imprime o valor no formato Go-syntax (com detalhes de tipo)
+
+| %T
+| Imprime o tipo da variável
+
+| %%
+| Imprime o caractere de porcentagem (%)
+|===
+
 
 Cada item inclui explicações sobre inferência de tipos e qual tipo padrão o Go atribui quando o tipo não é declarado explicitamente.
 
