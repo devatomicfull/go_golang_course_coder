@@ -152,3 +152,63 @@ Cada item inclui explicações sobre inferência de tipos e qual tipo padrão o 
 === Conclusão
 Apresenta um resumo didático dos tipos básicos do Go, constantes, variáveis e inferência de tipo, sem exibir o código fonte. É ideal como material de estudo para fixar conceitos antes de avançar para estruturas mais complexas como arrays, slices, maps e structs.
 
+= Exercício 4 - tipos básicos
+:toc:
+
+=== Resumo Rápido
+Este exercício demonstra os conceitos fundamentais dos **tipos básicos em Go**, incluindo inteiros, números reais, booleanos, strings, runes e inspeção de tipos usando `reflect.TypeOf`. Ele mostra, na prática, como a linguagem trata cada tipo primitivo e como esses valores são interpretados internamente.
+
+=== Objetivo
+
+* Entender como funcionam os tipos primitivos do Go.
+* Visualizar como o compilador interpreta literais numéricos e string.
+* Diferenciar tipos inteiros com e sem sinal (uint, int) e seus tamanhos.
+* Compreender a representação de caracteres via rune (Unicode — int32).
+* Explorar a diferença entre `float32` e `float64`.
+* Observar o uso de `reflect.TypeOf` para inspeção de tipos.
+* Analisar a diferença entre string comum e string multilinha com crase.
+
+O uso de `reflect.TypeOf`:
+`reflect.TypeOf` permite descobrir **exatamente o tipo** de uma variável ou literal em tempo de execução, sendo útil para estudo, debug ou validação de dados. : tipos numéricos, booleanos, strings, runes e inspeção de tipos com reflect.TypeOf.
+
+=== O que foi feito
+O conteúdo estudado inclui:
+
+* Impressão e análise de tipos de valores inteiros (`int8`, `int16`, `int32`, `int64`, `uint8`, `uint16`...).
+* Uso do valor máximo de `int64` via `math.MaxInt64`.
+* Declaração de um `byte` como alias de `uint8`.
+* Declaração de `rune` (int32) para representar caracteres Unicode.
+* Diferença entre float32 e float64 observada via tipos inferidos.
+* Avaliação do tipo de booleanos (`bool`) e negação lógica.
+* Strings simples e strings de múltiplas linhas usando crase.
+* Explicação do porquê strings não são mutáveis e nunca usam aspas simples.
+* Impressão do tamanho da string com `len()`.
+* Demonstração de que caracteres entre aspas simples são tratados como `rune`.
+
+=== Tabela de valores padrão na inferência de tipos (Go)
+
+Quando você declara valores sem especificar o tipo explicitamente, o Go aplica tipos padrão conforme o literal usado. A tabela abaixo mostra como o compilador determina esses tipos:
+
+[options="header"]
+|===
+| Literal / Forma de Declaração | Tipo Inferido | Valor Exemplo
+
+| 10 | int | 10
+
+| 10.0 | float64 | 10.0
+
+| 49.99 | float64 | 49.99
+
+| true / false | bool | true
+
+| "texto" | string | "texto"
+
+| 'a' | rune (int32) | 97 (código Unicode)
+
+| var x | depende do valor atribuído | —
+
+| := (atribuição curta) | tipo do literal usado | x := 5 → int / x := 2.5 → float64
+|===
+
+=== Conclusão
+Este exercício permitiu compreender de forma prática como o Go lida com seus tipos primitivos, como inteiros, floats, booleanos, strings e runes. Também foi possível visualizar como o compilador infere tipos padrão a partir de literais, além de entender a utilidade de reflect.TypeOf para identificar o tipo real de cada valor em tempo de execução. O uso de strings comuns e multilinhas, a distinção entre caracteres e runes, e a análise do comportamento de cada tipo forneceram uma base sólida para aprofundar os estudos na linguagem. Os conceitos aqui trabalhados são fundamentais para os próximos temas, como arrays, slices, maps, ponteiros e estruturas mais avançadas.
