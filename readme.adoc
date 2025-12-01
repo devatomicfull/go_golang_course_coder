@@ -152,7 +152,7 @@ Cada item inclui explicações sobre inferência de tipos e qual tipo padrão o 
 === Conclusão
 Apresenta um resumo didático dos tipos básicos do Go, constantes, variáveis e inferência de tipo, sem exibir o código fonte. É ideal como material de estudo para fixar conceitos antes de avançar para estruturas mais complexas como arrays, slices, maps e structs.
 
-= Exercício 4 - tipos básicos
+= Exercício 4 - tipos basicos
 :toc:
 
 === Resumo Rápido
